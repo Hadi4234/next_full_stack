@@ -13,7 +13,7 @@ export default function AddTodo() {
         })
     }
   return (
-    <form onSubmit={()=>handleSubmit(addTodo)}>
+    <form onSubmit={handleSubmit(addTodo)}>
       <input {...register("todo",{required:true})} className=' outline-0 bg-transparent border rounded px-4 py-2' type='text'/>
       <button type="submit" className=' bg-indigo-800 px-4 py-2 rounded text-white '>Add Todo</button>
       </form>

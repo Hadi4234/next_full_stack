@@ -2,7 +2,7 @@ import Todo from "@/app/lib/model/todo";
 import connectTodo from "@/app/lib/mongoose"
 import { NextResponse } from "next/server";
 
-export const GET = async (req,res)=>{
+export const GET = async (req)=>{
     try {
         connectTodo();
         const result = await Todo.find()
@@ -11,7 +11,7 @@ export const GET = async (req,res)=>{
     }
 }
 
-export const POST = async (req,res)=>{
+export const POST = async (req)=>{
     try {
         const data = await req.json() 
         connectTodo();
